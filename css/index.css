@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-family: 'Splash', cursive;
+    font-family: 'Trispace', sans-serif;
+}
+
+body {
+    background-image: url(vaca.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+#blur {
+    backdrop-filter: blur(6px);
+}
+
+nav {
+    width: 100%;
+    padding: 1.3rem 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    margin-bottom: 20px;
+}
+.invisible{
+    border-width: 0px;
+    -webkit-box-shadow: 0px 0px;
+    box-shadow: 0px 0px;
+    background-color: rgba(0,0,0,0.0);
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+}
+nav a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: top right;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+nav p {
+    color: grey;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.formulario {
+    background-color: rgba(255, 255, 255, 0.717);
+    margin: 0px auto;
+    width: 40%;
+    padding: 2rem;
+    margin-top: 7%;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    border-radius: 15px;
+    /* text-align: center; */
+}
+.formvacunas {
+    width: 65% !important;
+} 
+
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.formulario form ul li {
+    text-decoration: none;
+    padding: .7rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.formulario form ul li label {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.formulario form ul li input {
+    margin-left: 30px;
+    padding: .4rem .8rem;
+}
+
+.formulario form ul li select {
+    margin-left: 15px;
+    padding: .4rem .8rem;
+    font-size: 18px;
+}
+
+.enviar {
+    font-size: 16px;
+    font-weight: bolder;
+    padding: .5rem 2rem;
+    background-color: rgb(227, 227, 227);
+    color: black;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.enviar1 {
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 30px;
+    padding: .5rem 2rem;
+    background-color: rgb(123, 122, 122);
+    color: black;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+.enviar2{
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+
+}
+.enviar:hover {
+    background-color: rgb(156, 156, 156);
+}
+
+.enviar1:hover {
+    background-color: rgb(202, 202, 202);
+}
+
+.buscador {
+    background-color: rgba(20, 20, 20, 0.766);
+    color: white;
+    width: 95%;
+    margin: 20px auto;
+    font-weight: bolder;
+    border-radius: 20px;
+    padding: .4rem .7rem;
+}
+
+.buscador select {
+    padding: .2rem .5rem;
+}
+
+.buscador input {
+    width: 170px;
+}
+
+.formularioconsulta {
+    display: flex;
+    flex-direction: column;
+
+}
+.vacio{
+    height: 50px;
+}
+
+.tabla {
+    background-color: white;
+    width: 98%;
+    margin: 40px auto 50px auto;
+    border-radius: 15px;
+    flex: 1;
+    text-align: center;
+}
+
+.alinear {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 15px 50px;
+
+}
+.alinearestado{
+    margin: 15px 400px;
+
+}
+table {
+    padding: .5rem;
+    width: 100%;
+}
+
+table tr .grande {
+    width: 15%;
+}
+table tr .grandef {
+    width: 22%;
+}
+table tr .grandeplus {
+    width: 40%;
+}
+table tr .normal {
+    width: 10%;
+}
+
+table tr .chico {
+    width: 4%;
+}
+
+table tr .chico button {
+    cursor: pointer;
+}
+
+table th {
+    background-color: rgb(255, 255, 255);
+}
+
+tr:nth-child(odd) {
+    background-color: #d5f2dc;
+}
+
+table tr {
+    font-size: 20px;
+    text-align: center;
+}
+
+table tr td button {
+    border: none;
+    background: none;
+}
+
+table tr td .icons {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    padding: 0px 5px;
+}
+
+table tr td .fa-trash {
+    font-size: 25px;
+    color: red;
+    padding: 0px 5px;
+}
+
+.mostradoTotal {
+    background-color: rgba(20, 20, 20, 0.865);
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.tablasLugares {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tablasTodo {
+    width: 26%;
+}
+.tablasVacunas{
+    width: 85%;
+}
+.formEnfermedades{
+    width: 45%;
+}
+.tablasEnfermedades{
+    width: 40%;
+}
+.tablasLugares td {
+    padding: 5px 12px;
+}
+
+.tablasLugares a {
+    text-decoration: none;
+    color: red;
+    font-weight: bolder;
+}
+
+.tablasLugares a:hover {
+    color: black;
+    cursor: pointer;
+}
+
+#insertar2 {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: bolder;
+}
+
+#insertar2:hover {
+    background-color: rgba(150, 150, 150, 0.885);
+    color: black;
+    font-weight: bolder;
+}
+
+.login {
+    width: 30%;
+    font-size: 26px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.login input {
+    margin-bottom: 40px;
+    width: 60%;
+    padding: .4rem 0;
+}
+
+.login h1 {
+    font-size: 45px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.fa-user-circle:before{
+    font-size: 36px;
+}
+
+.error {
+    color: #b30000;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin: 0 auto 35px auto;
+    font-size: 28px;
+}
+.comportamientoh1{
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.786);
+    color: white;
+    border-radius: 25px;
+    padding: .5rem 3rem;
+    margin: 10px auto 30px auto; 
+    text-align: center;
+
+}
+
+footer {
+    padding: .5rem 0;
+    width: 100%;
+    color: white;
+    background-color: black;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.exportar{
+    margin: 0px auto;
+}
+.exportar ul li{
+    width: 132%;
+    text-align: center;
+}
+
+.exportar ul li a{
+    color: rgb(0, 0, 0) !important;
+    background-color: #39d45d !important;
+    font-size: 22px !important;
+}
+
+.exportar ul li ul li a{
+    width: 98%;
+}
+
+
+#menu ul li {
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul a {
+    display: block;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 6px 5px 4px 7px;
+    letter-spacing: 1px;
+}
+
+#menu ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    padding: 0;
+}
+
+#menu ul ul li {
+    float: none;
+    width: 150px
+}
+
+#menu ul ul a {
+    line-height: 120%;
+    padding: 10px 15px;
+}
+
+#menu ul li:hover>ul {
+    display: block;
+}
+
+.iconito-eliminar{color: red;}
